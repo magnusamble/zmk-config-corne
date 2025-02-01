@@ -1,6 +1,6 @@
 / {
     chosen {
-        zmk,underglow = &ws2812_leds;
+        zmk,underglow,backlight = &ws2812_leds;
     };
 };
 
