@@ -1,0 +1,15 @@
+/ {
+    chosen {
+        zmk,underglow = &ws2812_leds;
+    };
+};
+
+&spi1 {
+    status = "okay";
+    
+    ws2812_leds: led_strip {
+        compatible = "worldsemi,ws2812-spi";
+        chain-length = <12>;  // Adjust this number to your LED count
+        spi-max-frequency = <8000000>;
+    };
+};
