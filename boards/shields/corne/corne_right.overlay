@@ -1,0 +1,25 @@
+/ {
+    chosen {
+        zmk,underglow = &ws2812_leds;
+        zmk,backlight = &backlight_leds {};
+    };
+};
+
+&spi1 {
+    status = "okay";
+
+    ws2812_leds: led_strip {
+        compatible = "worldsemi,ws2812-spi";
+        chain-length = <6>;  // Adjust this for underglow LEDs
+        spi-max-frequency = <4000000>;
+    };
+
+    backlight_leds: led_strip {
+        compatible = "worldsemi,ws2812-spi";
+        chain-length = <21>;
+        spi-max-frequency = <4000000>;
+    
+        zmk,backlight;
+    };
+
+};
