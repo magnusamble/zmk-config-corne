@@ -1,7 +1,7 @@
 / {
     chosen {
         zmk,underglow = &ws2812_leds;
-        zmk,backlight = &backlight_leds;
+        zmk,backlight = &backlight_leds {};
     };
 };
 
@@ -14,9 +14,12 @@
         spi-max-frequency = <4000000>;
     };
 
-    backlight_leds: led_strip_backlight {
+    backlight_leds: led_strip {
         compatible = "worldsemi,ws2812-spi";
-        chain-length = <21>;  // Adjust this for per-key backlight LEDs
+        chain-length = <21>;
         spi-max-frequency = <4000000>;
+    
+        zmk,backlight;
     };
+
 };
