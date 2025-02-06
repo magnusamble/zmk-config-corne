@@ -6,7 +6,6 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 
 &led_strip { chain-length = <27>; };
@@ -47,10 +46,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp GRAVE       &kp N1                &kp N2  &kp N3    &kp N4             &kp N5              &kp N6             &kp N7      &kp N8        &kp N9             &kp N0         &kp BSPC
-&kp LEFT_SHIFT  &kp NON_US_BACKSLASH  &trans  &trans    &kp MINUS          &kp EQUAL           &trans             &kp DELETE  &trans        &kp RIGHT_BRACKET  &kp BACKSLASH  &kp ESCAPE
-&kp LCTRL       &trans                &trans  &trans    &ext_power EP_OFF  &ext_power EP_ON    &ext_power EP_TOG  &trans      &trans        &trans             &trans         &trans
-                                              &kp LGUI  &trans             &kp ENTER           &kp SPACE          &trans      &kp LEFT_ALT
+&kp GRAVE       &kp N1                &kp N2  &kp N3    &kp N4     &kp N5       &kp N6     &kp N7      &kp N8        &kp N9             &kp N0         &kp BSPC
+&kp LEFT_SHIFT  &kp NON_US_BACKSLASH  &trans  &trans    &kp MINUS  &kp EQUAL    &trans     &kp DELETE  &trans        &kp RIGHT_BRACKET  &kp BACKSLASH  &kp ESCAPE
+&kp LCTRL       &trans                &trans  &trans    &trans     &trans       &trans     &trans      &trans        &trans             &trans         &trans
+                                              &kp LGUI  &trans     &kp ENTER    &kp SPACE  &trans      &kp LEFT_ALT
             >;
         };
 
